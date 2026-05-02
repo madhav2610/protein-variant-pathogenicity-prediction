@@ -1,4 +1,4 @@
-🧬 Protein Variant Pathogenicity Prediction using Transformer Representations
+# 🧬 Protein Variant Pathogenicity Prediction using Transformer Representations
 
 📌 Overview
 This project investigates how different representations of protein sequences influence the prediction of mutation pathogenicity. The goal is to evaluate whether transformer-based embeddings can improve prediction performance over traditional mutation-based features.
