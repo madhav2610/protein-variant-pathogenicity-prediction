@@ -122,6 +122,7 @@ The mutation's local context within the protein sequence is critical for determi
 The mutation effect can be modeled as a change in representation space.
 
 ## 📊 Results
+![Model Comparison](Figure_1.png)
 
 | Model                             | F1 Score |
 |----------------------------------|---------|
