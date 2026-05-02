@@ -63,6 +63,10 @@ The project is structured around comparing three levels of information:
 **Source:** ClinVar Missense Mutations Dataset (April 2023)  
 **Sequence Mapping:** Protein sequences mapped via UniProt accessions to ensure accurate wild-type and mutated alignments.  
 
+## 📁 Data & Embeddings
+- Raw data available at: https://zenodo.org/records/13163460?utm_source=chatgpt.com
+- Embeddings not included due to file size. Run embedding_script.py to regenerate.
+
 **Total samples:** ~75,000 (55,599 train / 19,642 test)  
 **Labels:** Binary (0 = benign, 1 = pathogenic)  
 
