@@ -7,37 +7,38 @@ Instead of treating this as a pure modeling task, the project focuses on represe
 ## 🗺️ Project Roadmap
 
 **1. Data Collection**
-   └── ClinVar Missense Mutations Dataset (April 2023)
-   └── Protein sequences mapped via UniProt accessions
+ - ClinVar Missense Mutations Dataset (April 2023)
+ - Protein sequences mapped via UniProt accessions
 
 **2. Data Cleaning**
-   └── Removed duplicates and invalid entries
-   └── Validated mutation positions against sequences
-   └── Protein-level train/test split to prevent leakage
+- Removed duplicates and invalid entries
+- extracted useful columns
+- Validated mutation positions against sequences
+- Protein-level train/test split to prevent leakage
 
 **3. Baseline Model**
-   └── Features: mutation position + wildtype AA + mutated AA (OHE)
-   └── Model: Random Forest
-   └── F1: 0.537
+- Features: mutation position + wildtype AA + mutated AA (OHE)
+- Model: Random Forest
+- F1: 0.537
 
 **4. Embedding Extraction (ESM-2)**
-   └── Model: facebook/esm2_t12_35M_UR50D
-   └── Cached unique original sequences for efficiency
-   └── Skipped sequences > 1024 tokens (~41% of data)
+- Model: facebook/esm2_t12_35M_UR50D
+- Cached unique original sequences for efficiency
+- Skipped sequences > 1024 tokens (~41% of data)
 
 **5. Strategy 2 — Position Embedding**
-   └── Extracted hidden state at mutation index
-   └── Model: Logistic Regression
-   └── F1: 0.724
+- Extracted hidden state at mutation index
+- Model: Logistic Regression
+- F1: 0.724
 
 **6. Strategy 3 — Difference Embedding**
-   └── Computed mutated − original mean pool difference
-   └── Model: Logistic Regression
-   └── F1: 0.604
+- Computed mutated − original mean pool difference
+- Model: Logistic Regression
+- F1: 0.604
 
 **7. Results & Analysis**
-   └── Strat 2 > Strat 3 > Baseline
-   └── Local context beats global difference representation
+- Strat 2 > Strat 3 > Baseline
+- Local context beats global difference representation
 
 ## 🎯 Problem Statement
 **Given:**
